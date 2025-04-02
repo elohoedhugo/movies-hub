@@ -1,0 +1,133 @@
+header{
+  
+  display: flex;
+  gap: 30px;
+}
+
+.logodiv img{
+  height: 60px;
+  width: 250px;
+}
+
+nav{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  
+}
+
+.navlink{
+  border: 2px solid rgb(50, 94, 101);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 160px;
+  border-radius: 8px;
+  background-color: rgb(13, 19, 18);
+  box-shadow: 7px 2px 14px rgb(11, 68, 71);
+}
+
+.navlink a{
+  text-decoration: none;
+  color: white;
+  
+}
+
+.react-icon{
+  color: white;
+  
+}
+
+.inputdiv{
+  display: flex;
+  align-items: center;
+  margin-left: 12vw;
+  
+}
+
+.searchbutton{
+    width: 80px;
+    height: 35px;
+    background-color: rgb(13, 42, 40);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgb(19, 77, 76);
+    cursor: pointer;
+}
+
+.searchbutton:active{
+  background-color: rgb(53, 88, 94);
+}
+
+.inputdiv input{
+  height: 40px;
+  background-color: rgb(33, 35, 35);
+  border-radius: 7px;
+  border: 2px solid rgb(18, 66, 54);
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  box-shadow: 2px 2px 12px rgb(10, 51, 43);
+}
+
+
+
+h1{
+  color: rgb(18, 38, 38);
+  text-align: center;
+  font-size: 45px;
+  text-shadow: 2px 3px 5px rgb(218, 205, 205);
+}
+
+.movie-grid{
+  padding-inline: 40px;
+  padding-block: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  color: white;
+  gap: 50px;
+  
+
+}
+
+.movie{
+  text-align: center;
+  align-items: center;
+  background-color: rgb(6, 19, 18);
+  height: 550px;
+  width: 250px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 7px 7px 13px rgb(82, 84, 85);
+}
+
+.triangle{
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid rgb(255, 0, 0);
+  content: "18+";
+}
+
+.triangle::before{
+  content: "18+";
+  position: absolute;
+  left: -48px;
+  top: 7px;
+  font-weight: 700;
+  
+}
+
+.movie-img{
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 10px;
+}
