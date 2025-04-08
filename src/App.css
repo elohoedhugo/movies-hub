@@ -1,133 +1,881 @@
-header{
-  
-  display: flex;
-  gap: 30px;
-}
-
-.logodiv img{
-  height: 60px;
-  width: 250px;
-}
-
-nav{
-  display: flex;
-  gap: 10px;
-  align-items: center;
+body{
+  width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
   
 }
 
-.navlink{
-  border: 2px solid rgb(50, 94, 101);
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  width: 160px;
-  border-radius: 8px;
-  background-color: rgb(13, 19, 18);
-  box-shadow: 7px 2px 14px rgb(11, 68, 71);
-}
 
-.navlink a{
-  text-decoration: none;
-  color: white;
+
+@media (max-width:1536px){
+  body{
+    max-width: 1280px;
+  }
   
-}
 
-.react-icon{
-  color: white;
+
+  header{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 11px;
+    height: 80px;
+  }
   
-}
-
-.inputdiv{
-  display: flex;
-  align-items: center;
-  margin-left: 12vw;
+  .logodiv img{
+    height: 50px;
+    width: 160px;
+  }
   
-}
+  nav{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+  }
+  
+  .navlink{
+    border: 2px solid rgb(50, 94, 101);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: rgb(13, 19, 18);
+    box-shadow: 7px 2px 14px rgb(11, 68, 71);
+    height: 20px;
+  }
 
-.searchbutton{
-    width: 80px;
-    height: 35px;
-    background-color: rgb(13, 42, 40);
+  #recommendations{
+    width: 140px;
+  }
+  
+  .navlink a{
+    text-decoration: none;
     color: white;
+    
+  }
+  
+  .react-icon{
+    color: white;
+    
+  }
+
+  
+  .searchbutton{
+      width: 90px;
+      font-size: 12px;
+      height: 30px;
+      background-color: rgb(13, 42, 40);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgb(19, 77, 76);
+      cursor: pointer;
+      height: 35px;
+  }
+  
+  .searchbutton:active{
+    background-color: rgb(53, 88, 94);
+  }
+  
+  input{
+    height: 30px;
+    width: 17vw;
+    margin-left: 6vw;
+    background-color: rgb(33, 35, 35);
+    border-radius: 7px;
+    border: 2px solid rgb(18, 66, 54);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 2px 2px 12px rgb(10, 51, 43);
+  }
+
+  .menu-button-div{
+    display: none;
+  }
+  
+  
+  
+  h1{
+    color: rgb(18, 38, 38);
+    text-align: center;
+    font-size: 45px;
+    text-shadow: 2px 3px 5px rgb(218, 205, 205);
+  }
+  
+  .movie-grid{
+    padding-inline: 40px;
+    padding-block: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    color: white;
+    gap: 100px;
+    justify-content: center;
+    
+  
+  }
+  
+  .movie{
+    text-align: center;
+    background-color: rgb(6, 19, 18);
+   
+    width: 20vw;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 7px 7px 13px rgb(82, 84, 85);
+  }
+  
+  .triangle{
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid rgb(255, 0, 0);
+    content: "18+";
+  }
+  
+  .triangle::before{
+    content: "18+";
+    position: absolute;
+    left: -48px;
+    top: 7px;
+    font-weight: 700;
+    
+  }
+  
+  .movie-img{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 10px;
+  }
+}
+
+@media (max-width:1280px){
+  body{
+    max-width: 1024px;
+  }
+  
+
+
+  header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 11px;
+    height: 60px;
+  }
+  
+  .logodiv img{
+    height: 40px;
+    width: 140px;
+  }
+  
+  nav{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+  }
+  
+  .navlink{
+    border: 2px solid rgb(50, 94, 101);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 70px;
+    border-radius: 8px;
+    background-color: rgb(13, 19, 18);
+    box-shadow: 7px 2px 14px rgb(11, 68, 71);
+    height: 12px;
+  }
+
+  #recommendations{
+    width: 130px;
+  }
+  
+  .navlink a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  .react-icon{
+    color: white;
+    
+  }
+
+  
+  .searchbutton{
+      width: 90px;
+      font-size: 11px;
+      height: 30px;
+      background-color: rgb(13, 42, 40);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgb(19, 77, 76);
+      cursor: pointer;
+      height: 35px;
+  }
+  
+  .searchbutton:active{
+    background-color: rgb(53, 88, 94);
+  }
+  
+  input{
+    height: 30px;
+    width: 14vw;
+    margin-left: 3vw;
+    background-color: rgb(33, 35, 35);
+    border-radius: 7px;
+    border: 2px solid rgb(18, 66, 54);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 2px 2px 12px rgb(10, 51, 43);
+  }
+  
+  .menu-button-div{
+    display: none;
+  }
+  
+  
+  h1{
+    color: rgb(18, 38, 38);
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2px 3px 5px rgb(218, 205, 205);
+  }
+  
+  .movie-grid{
+    padding-inline: 40px;
+    padding-block: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    color: white;
+    gap: 100px;
+    justify-content: center;
+    
+  
+  }
+  
+  .movie{
+    text-align: center;
+    background-color: rgb(6, 19, 18);
+   
+    width: 20vw;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 7px 7px 13px rgb(82, 84, 85);
+  }
+  
+  .triangle{
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid rgb(255, 0, 0);
+    content: "18+";
+  }
+  
+  .triangle::before{
+    content: "18+";
+    position: absolute;
+    left: -48px;
+    top: 7px;
+    font-weight: 700;
+    
+  }
+  
+  .movie-img{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 10px;
+  }
+}
+
+@media (max-width:1024px){
+  body{
+    max-width: 768px;
+  }
+  
+
+
+  header{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    font-size: 11px;
+    height: 80px;
+  }
+  
+  .logodiv img{
+    height: 40px;
+    width: 160px;
+  }
+  
+  nav{
+    
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+    
+    
+  }
+  
+  .navlink{
+    
+    border: 2px solid rgb(50, 94, 101);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 70px;
+    border-radius: 8px;
+    background-color: rgb(13, 19, 18);
+    box-shadow: 7px 2px 14px rgb(11, 68, 71);
+    height: 20px;
+    display: none;
+  }
+
+  #recommendations{
+    width: 100px;
+  }
+  
+  .navlink a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  .react-icon{
+    color: white;
+    
+  }
+
+  
+  .searchbutton{
+      margin-left: 40px;
+      width: 90px;
+      font-size: 12px;
+      height: 30px;
+      background-color: rgb(13, 42, 40);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgb(19, 77, 76);
+      cursor: pointer;
+      height: 35px;
+  }
+  
+  .searchbutton:active{
+    background-color: rgb(53, 88, 94);
+  }
+  
+  input{
+    height: 30px;
+    width: 23vw;
+    margin-left: 2vw;
+    background-color: rgb(33, 35, 35);
+    border-radius: 7px;
+    border: 2px solid rgb(18, 66, 54);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 2px 2px 12px rgb(10, 51, 43);
+  }
+
+
+  .menu-button-div{
+    position: relative;
+    display: block;
+   }
+
+
+  .menu{
     border: none;
-    border-radius: 6px;
-    box-shadow: 2px 2px 2px rgb(19, 77, 76);
+  }
+
+
+  
+  .menu-icon{
+    height: 50px;
+    width: 30px;
     cursor: pointer;
+  }
+
+  .menu-container{
+    position: absolute;
+    left: -30px;
+    top: 50px;
+    background-color: rgb(17, 43, 43);
+    color: wheat;
+    border-radius: 20px;
+  
+  }
+
+  .menu-container li{
+    list-style: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  
+  h1{
+    color: rgb(18, 38, 38);
+    text-align: center;
+    font-size: 45px;
+    text-shadow: 2px 3px 5px rgb(218, 205, 205);
+  }
+  
+  .movie-grid{
+    padding-inline: 40px;
+    padding-block: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    color: white;
+    gap: 50px;
+    justify-content: center;
+    
+  
+  }
+  
+  .movie{
+    text-align: center;
+    background-color: rgb(6, 19, 18);
+   
+    width: 20vw;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 7px 7px 13px rgb(82, 84, 85);
+  }
+  
+  .triangle{
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid rgb(255, 0, 0);
+    content: "18+";
+  }
+  
+  .triangle::before{
+    content: "18+";
+    position: absolute;
+    left: -48px;
+    top: 7px;
+    font-weight: 700;
+    
+  }
+  
+  .movie-img{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 10px;
+  }
 }
 
-.searchbutton:active{
-  background-color: rgb(53, 88, 94);
-}
-
-.inputdiv input{
-  height: 40px;
-  background-color: rgb(33, 35, 35);
-  border-radius: 7px;
-  border: 2px solid rgb(18, 66, 54);
-  text-align: center;
-  color: white;
-  font-weight: 700;
-  box-shadow: 2px 2px 12px rgb(10, 51, 43);
-}
-
-
-
-h1{
-  color: rgb(18, 38, 38);
-  text-align: center;
-  font-size: 45px;
-  text-shadow: 2px 3px 5px rgb(218, 205, 205);
-}
-
-.movie-grid{
-  padding-inline: 40px;
-  padding-block: 20px;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  color: white;
-  gap: 50px;
+@media (max-width:768px){
+  body{
+    max-width: 640px;
+  }
   
 
-}
 
-.movie{
-  text-align: center;
-  align-items: center;
-  background-color: rgb(6, 19, 18);
-  height: 550px;
-  width: 250px;
-  border-radius: 15px;
-  position: relative;
-  box-shadow: 7px 7px 13px rgb(82, 84, 85);
-}
-
-.triangle{
-  position: absolute;
-  border-radius: 10px;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 50px solid transparent;
-  border-left: 50px solid rgb(255, 0, 0);
-  content: "18+";
-}
-
-.triangle::before{
-  content: "18+";
-  position: absolute;
-  left: -48px;
-  top: 7px;
-  font-weight: 700;
+  header{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 11px;
+    height: 80px;
+  }
   
+  .logodiv img{
+    height: 40px;
+    width: 160px;
+  }
+  
+  nav{
+    
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+    
+    
+  }
+  
+  .navlink{
+    
+    border: 2px solid rgb(50, 94, 101);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 70px;
+    border-radius: 8px;
+    background-color: rgb(13, 19, 18);
+    box-shadow: 7px 2px 14px rgb(11, 68, 71);
+    height: 20px;
+    display: none;
+  }
+
+  #recommendations{
+    width: 100px;
+  }
+  
+  .navlink a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  .react-icon{
+    color: white;
+    
+  }
+
+  
+  .searchbutton{
+      margin-left: 40px;
+      width: 90px;
+      font-size: 12px;
+      height: 30px;
+      background-color: rgb(13, 42, 40);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgb(19, 77, 76);
+      cursor: pointer;
+      height: 35px;
+  }
+  
+  .searchbutton:active{
+    background-color: rgb(53, 88, 94);
+  }
+  
+  input{
+    height: 30px;
+    width: 23vw;
+    margin-left: 2vw;
+    background-color: rgb(33, 35, 35);
+    border-radius: 7px;
+    border: 2px solid rgb(18, 66, 54);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 2px 2px 12px rgb(10, 51, 43);
+  }
+
+
+  .menu-button-div{
+    display: block;
+    position: relative;
+   }
+
+
+  .menu{
+    display: block;
+    border: none;
+  }
+
+
+  
+  .menu-icon{
+    height: 50px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .menu-container{
+    position: absolute;
+    left: -30px;
+    top: 50px;
+    background-color: rgb(17, 43, 43);
+    color: wheat;
+    border-radius: 20px;
+  
+  }
+
+  .menu-container li{
+    list-style: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  
+  h1{
+    color: rgb(18, 38, 38);
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 2px 3px 5px rgb(218, 205, 205);
+    padding-top: 20px;
+  }
+  
+  .movie-grid{
+    padding-inline: 40px;
+    padding-block: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    color: white;
+    gap: 50px;
+    justify-content: center;
+    
+  
+  }
+  
+  .movie{
+    text-align: center;
+    background-color: rgb(6, 19, 18);
+   
+    width: 20vw;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 7px 7px 13px rgb(82, 84, 85);
+  }
+  
+  .triangle{
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid rgb(255, 0, 0);
+    content: "18+";
+  }
+  
+  .triangle::before{
+    content: "18+";
+    position: absolute;
+    left: -48px;
+    top: 7px;
+    font-weight: 700;
+    
+  }
+  
+  .movie-img{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 10px;
+  }
 }
 
-.movie-img{
-  width: 100%;
-  height: 100%;
+@media (max-width:640px){
+  body{
+    max-width: 475px;
+  }
   
-  border-radius: 10px;
+
+
+  header{
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    height: 80px;
+  }
+  
+  .logodiv img{
+    height: 30px;
+    width: 120px;
+  }
+
+  .logodiv{
+    border: 2px solid;
+  }
+  
+  nav{
+    
+    display: flex;
+    align-items: center;
+    border: 2px solid blue;
+    
+    
+    
+  }
+  
+  .navlink{
+    
+    border: 2px solid rgb(50, 94, 101);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 70px;
+    border-radius: 8px;
+    background-color: rgb(13, 19, 18);
+    box-shadow: 7px 2px 14px rgb(11, 68, 71);
+    height: 20px;
+    display: none;
+  }
+
+  #recommendations{
+    width: 100px;
+  }
+  
+  .navlink a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  .react-icon{
+    color: white;
+    
+  }
+
+  
+  .searchbutton{
+      width: 90px;
+      font-size: 12px;
+      height: 30px;
+      background-color: rgb(13, 42, 40);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgb(19, 77, 76);
+      cursor: pointer;
+      height: 35px;
+  }
+  
+  .searchbutton:active{
+    background-color: rgb(53, 88, 94);
+  }
+  
+  input{
+    height: 30px;
+    width: 15vw;
+    margin-left: 1px;
+    background-color: rgb(33, 35, 35);
+    border-radius: 7px;
+    border: 2px solid rgb(18, 66, 54);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 2px 2px 12px rgb(10, 51, 43);
+  }
+
+
+  .menu-button-div{
+    display: block;
+    position: relative;
+   }
+
+
+  .menu{
+    display: block;
+    border: none;
+  }
+
+
+  
+  .menu-icon{
+    height: 50px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .menu-container{
+    position: absolute;
+    left: -30px;
+    top: 50px;
+    background-color: rgb(17, 43, 43);
+    color: wheat;
+    border-radius: 20px;
+  
+  }
+
+  .menu-container li{
+    list-style: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  
+  h1{
+    color: rgb(18, 38, 38);
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 3px 5px rgb(218, 205, 205);
+    padding-top: 20px;
+  }
+  
+  .movie-grid{
+    padding-inline: 40px;
+    padding-block: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    color: white;
+    gap: 20px;
+    justify-content: center;
+    
+  
+  }
+  
+  .movie{
+    text-align: center;
+    background-color: rgb(6, 19, 18);
+   
+    width: 20vw;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 7px 7px 13px rgb(82, 84, 85);
+  }
+  
+  .triangle{
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid rgb(255, 0, 0);
+    content: "18+";
+  }
+  
+  .triangle::before{
+    content: "18+";
+    position: absolute;
+    left: -48px;
+    top: 7px;
+    font-weight: 700;
+    
+  }
+  
+  .movie-img{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 10px;
+  }
 }
