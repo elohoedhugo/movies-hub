@@ -1,9 +1,9 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect, useContext, useState } from 'react'
 import {TMDB_API_KEY} from "../config"
 import { MovieContext } from './MovieContext.jsx'
 
 const MovieFinder = () => {
-
+  const [loader, setLoader] = useState(true)
   const {movies, setMovies} = useContext(MovieContext)
   const TMDB_BASE_URL =  "https://api.themoviedb.org/3/trending/movie/week"
  
@@ -14,6 +14,7 @@ const MovieFinder = () => {
       const data = await response.json()
       console.log(data.results)
       setMovies(data.results)
+      setLoader(false)
      }
 
      catch(error){
@@ -32,7 +33,11 @@ const MovieFinder = () => {
   return (
     <div>
     <div className='body'>
-      <h1>🔥 Currently trending.....</h1>
+      {loader ? (
+        <h1>⏰  Loading movies.....</h1>
+      ):(
+        <h1>🔥 Currently trending.....</h1>
+      )}
       <div className='movie-grid'>
         {movies?.map((movie)=>(
           <div key={movie.id}className='movie'>
